@@ -17,4 +17,6 @@
         </activity>
     </application>
 
+    <!--<instrumentation android:label="CI Test" android:targetPackage="com.keelean.citest" android:name="android.test.InstrumentationTestRunner" />-->
+    <instrumentation android:targetPackage="com.keelean.citest" android:name="android.test.InstrumentationTestRunner" />
 </manifest>
