@@ -4,6 +4,7 @@ import android.app.Application;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.ApplicationTestCase;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.robotium.solo.Solo;
@@ -37,6 +38,16 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<MainActivi
         TextView text = (TextView) solo.getView(R.id.result);
 
         assertEquals("7 + 4 = 11", text.getText());
+
+    }
+
+    public void test_toast() throws Exception {
+
+        solo.clickOnButton("test");
+
+        boolean found = solo.searchText("toast shown");
+
+        assertEquals(true, found);
 
     }
 
